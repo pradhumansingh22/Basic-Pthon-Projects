@@ -4,12 +4,12 @@ class Library:
         if self.isPresent(book_name):
             print("Book already exists!")
         else:
-            self.f =  open("myfile.txt", 'a')
+            self.f =  open("library.txt", 'a')
             self.f.write(f"{book_name}\n")
             self.f.close()
     
     def isPresent(self, book_name):
-         with open("myfile.txt", 'r') as b:
+         with open("library.txt", 'r') as b:
               while True:
                     self.line = b.readline()
                     if self.line.strip() == book_name.strip():
@@ -19,7 +19,7 @@ class Library:
 
     @classmethod
     def showBooks(cls):
-        with open("myfile.txt", 'r') as cls.books_available:
+        with open("library.txt", 'r') as cls.books_available:
                 while True:
                     line = cls.books_available.readline()
                     if not line:
