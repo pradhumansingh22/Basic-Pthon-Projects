@@ -4,7 +4,7 @@ class Library:
         if self.isPresent(book_name):
             print("Book already exists!")
         else:
-            self.f =  open("library.txt", 'a')
+            self.f = open("library.txt", 'a')
             self.f.write(f"{book_name}\n")
             self.f.close()
     
